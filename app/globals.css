@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --alert: #dc2626;
+  --success: #059669;
+  --warning: #d97706;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  background: #f7f9fa;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #e3e7ed;
+  padding: 0 2rem;
+  height: 60px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-right: 2rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: #e0e7ff;
+  color: var(--primary);
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+textarea,
+select,
+input[type="file"] {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.7rem;
+  border: 1px solid #e3e7ed;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+button,
+input[type="submit"] {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+.result-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.result-card.success {
+  background: #e0f7e9;
+  color: var(--success);
+}
+
+.result-card.warning {
+  background: #fff7e0;
+  color: var(--warning);
+}
+
+.result-card.error {
+  background: #ffe0e0;
+  color: var(--alert);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.map-card {
+  padding: 1rem;
+}
+
+#mapContainer {
+  height: 350px;
+  width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.map-filters {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    max-width: 100%;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+} 
